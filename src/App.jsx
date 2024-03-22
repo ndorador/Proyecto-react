@@ -11,7 +11,7 @@ const App = () => {
     <ChakraProvider>
       <NavBar />
       <Contenedor mensaje="¡Bienvenido a nuestra tienda en línea!" />
-      <ItemListContainer mensaje="Catálogo de productos" />
+      <ItemListContainer mensaje="Nuestro Catálogo de productos" />
       <CartWidget />
     </ChakraProvider>
   );

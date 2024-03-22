@@ -5,7 +5,7 @@ const ItemListContainer = ({ message }) => {
   return (
     <Box>
       <h2>{message}</h2>
-      {/* Aquí mostrarás el catálogo de productos en futuras implementaciones */}
+      {/* Aquí estará el catálogo de productos*/}
     </Box>
   );
 }

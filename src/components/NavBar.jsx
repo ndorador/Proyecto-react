@@ -4,7 +4,7 @@ import CartWidget from './CartWidget';
 
 const NavBar = () => {
   return (
-    <Flex p="4" bg="blue.500" color="white">
+    <Flex p="4" bg="orange.500" color="white">
       <Box p="2">
       <img src="src/assets/img/logos/logo.png" height="40px" />
       </Box>
