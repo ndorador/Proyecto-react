@@ -1,13 +1,11 @@
 import React from 'react';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
-const ItemListContainer = ({ mensaje }) => {
+const ItemListContainer = ({ message }) => {
   return (
-    <Box p="4">
-      <Heading as="h2" size="xl" textAlign="center" mt="4">
-        {mensaje}
-      </Heading>
-      {/* Aquí irá el catálogo de productos */}
+    <Box>
+      <h2>{message}</h2>
+      {/* Aquí mostrarás el catálogo de productos en futuras implementaciones */}
     </Box>
   );
 }

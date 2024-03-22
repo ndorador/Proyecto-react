@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flex, Box, Spacer, Heading } from '@chakra-ui/react';
+import CartWidget from './CartWidget';
 
 const NavBar = () => {
   return (
@@ -18,7 +19,7 @@ const NavBar = () => {
         <Heading size="md">Contacto</Heading>
       </Box>
       <Box p="2">
-        Carrito
+        <CartWidget />
       </Box>
     </Flex>
   );
