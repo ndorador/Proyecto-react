@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <Flex p="4" bg="blue.500" color="white">
       <Box p="2">
-        Logo
+      <img src="src/assets/img/logos/logo.png" height="40px" />
       </Box>
       <Spacer />
       <Box p="2">
@@ -25,4 +25,4 @@ const NavBar = () => {
   );
 }
 
-export default NavBar;
+export default NavBar; 

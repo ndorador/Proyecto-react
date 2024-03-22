@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import NavBar from './components/NavBar';
-import Contenedor from './/components/Contenedor';
+import Contenedor from './components/Contenedor';
 import ItemListContainer from './components/ItemListContainer';
 import CartWidget from './components/CartWidget';
 
