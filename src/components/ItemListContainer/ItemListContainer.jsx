@@ -8,17 +8,18 @@ import { GridLoader } from "react-spinners";
 const ItemListContainer = ({title}) => { 
   const [ products, setProducts ] = useState([])
   const { categoryId } = useParams()
-
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => { 
-    setLoading(true)
-    const dataProductos = categoryId ? getProductsByCategory(categoryId) : getProducts()
-
+    setLoading(true);
+    const dataProductos = categoryId ? getProductsByCategory(categoryId) : getProducts();
+  
     dataProductos
     .then((el) => setProducts(el))
     .catch((error) => console.log(error))
-    .finally(() => setloading(false))
-  }, {categoryId})
+    .finally(() => setLoading(false)); 
+  
+  }, [categoryId]);
 
   return (
     <Box>
