@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { getProducts, getProductsByCategory } from "../../data/asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { redirect, useParams } from "react-router-dom";
-import { CircleLoader } from "react-spinners";
+import { GridLoader } from "react-spinners";
 
 const ItemListContainer = ({title}) => { 
   const [ products, setProducts ] = useState([])

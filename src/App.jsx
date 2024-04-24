@@ -1,8 +1,10 @@
+
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import NavBar from './components/NavBar/NavBar'
 import { ChakraProvider } from '@chakra-ui/react'
 import './App.css'
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import PageNotFound from './components/pageNotFound/pageNotFound'
 
 function App() {
@@ -10,15 +12,17 @@ function App() {
   return (
     
     <ChakraProvider>
-     <BrowserProvider>
+
+     <BrowserRouter>
       <NavBar/>
-      <Router>
+      <Routes>
         <Route path='/' element={<ItemListContainer title='Tienda'/>}/>
         <Route path='/categoria/:categoryId' element={<ItemListContainer title='Tienda' />} />
         <Route path='/producto/:productId' element={<ItemListContainer />} />
         <Route path='*' element={<PageNotFound />} />
-      </Router>
-      </BrowserProvider>
+      </Routes>
+      </BrowserRouter>
+
     </ChakraProvider>
   )
 }
