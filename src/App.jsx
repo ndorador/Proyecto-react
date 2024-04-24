@@ -1,20 +1,26 @@
-import React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
-import NavBar from './components/NavBar';
-import Contenedor from './components/Contenedor';
-import ItemListContainer from './components/ItemListContainer';
-import CartWidget from './components/CartWidget';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import NavBar from './components/NavBar/NavBar'
+import { ChakraProvider } from '@chakra-ui/react'
+import './App.css'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import PageNotFound from './components/pageNotFound/pageNotFound'
 
-const App = () => {
+function App() {
+
   return (
-  
+    
     <ChakraProvider>
-      <NavBar />
-      <Contenedor mensaje="¡Bienvenido a nuestra tienda en línea!" />
-      <ItemListContainer mensaje="Nuestro Catálogo de productos" />
-      <CartWidget />
+     <BrowserProvider>
+      <NavBar/>
+      <Router>
+        <Route path='/' element={<ItemListContainer title='Tienda'/>}/>
+        <Route path='/categoria/:categoryId' element={<ItemListContainer title='Tienda' />} />
+        <Route path='/producto/:productId' element={<ItemListContainer />} />
+        <Route path='*' element={<PageNotFound />} />
+      </Router>
+      </BrowserProvider>
     </ChakraProvider>
-  );
+  )
 }
 
-export default App;
+export default App
