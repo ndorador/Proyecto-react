@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ItemListContainer title='Tienda'/>}/>
         <Route path='/categoria/:categoryId' element={<ItemListContainer title='Tienda' />} />
-        <Route path='/producto/:productId' element={<ItemListContainer />} />
+        <Route path='/producto/:productId' element={<ItemDetailContainer />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
       </BrowserRouter>

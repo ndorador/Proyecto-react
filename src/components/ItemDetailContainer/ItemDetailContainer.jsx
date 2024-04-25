@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getProductById } from "../../data/asyncMock";
 import { useParams } from "react-router-dom";
-
+import ItemDetail from "../ItemDetail/ItemDetail"; 
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({});
@@ -20,4 +20,4 @@ const ItemDetailContainer = () => {
   );
 };
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
